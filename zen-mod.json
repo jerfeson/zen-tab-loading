@@ -1,0 +1,22 @@
+{
+  "better-tab-loading": {
+    "id": "better-tab-loading",
+    "name": "Better Tab Loading",
+    "description": "Transforms the tab loading indicator into a modern spinner with neon glow, fluid rotation, and an elegant pulse in the title.\n",
+    "homepage": "https://github.com/jerfeson/zen-tab-loading",
+    "style": "https://raw.githubusercontent.com/jerfeson/zen-tab-loading/refs/heads/master/chrome.css",
+    "readme": "https://raw.githubusercontent.com/jerfeson/zen-tab-loading/refs/heads/master/README.md",
+    "image": "https://raw.githubusercontent.com/jerfeson/zen-tab-loading/refs/heads/master/image.png",
+    "preferences": "https://raw.githubusercontent.com/jerfeson/zen-tab-loading/refs/heads/master/preferences.json",
+    "author": "jerfeson",
+    "version": "1.4",
+    "tags": [
+      "tabs",
+      "loading",
+      "glow"
+    ],
+    "createdAt": "2026-03-29",
+    "updatedAt": "2026-03-29",
+    "enabled": true
+  }
+}
