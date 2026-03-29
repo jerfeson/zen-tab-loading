@@ -34,7 +34,14 @@ The Better loading will appear immediately.
 
 Use this method if you want the mod to appear in **Settings -> Zen Mods** with editable preferences (color, glow intensity, pulse toggle).
 
-1. Open your Profile Directory (`about:support` → **Open Folder**)
+> [!CAUTION]
+> 
+> FIRST, BACK UP YOUR ALREADY INSTALLED MODS.
+> - In Zen Browser, go to **Settings -> Zen Mods** 
+> - Click **Export** to download your current mods list
+
+
+1. Open your Profile Directory (`about:support` -> **Open Folder**)
 2. Locate the file `zen-themes.json` (usually in the root of the profile folder)
 3. Open it with any text editor
 4. At the end of the JSON object (before the last `}`), add a comma `,` and then paste the entire content of the file [`zen-mod.json`](zen-mod.json) from this repository
