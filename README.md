@@ -15,7 +15,7 @@ The official Zen Mods store is in **partial freeze mode** (as stated in the offi
 
 > “Mods are currently in partial freeze mode until we do some kind of refactoring to prevent so many issues between consecutive updates.”
 
-Because of this, the **Import** button does not work correctly with manually created JSON files, it simply does nothing.  
+Because of this, the **Import** button does not work correctly with manually created JSON files, it simply does nothing. And new mods are not being sent to the store.
 The only reliable way to have the mod appear in the **Zen Mods** tab (with name, description, and editable preferences) is to follow the manual installation steps below.
 
 ### Installation
