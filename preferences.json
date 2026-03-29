@@ -1,0 +1,22 @@
+[
+  {
+    "property": "mod.tab-loading.loading-color",
+    "label": "Loading color (spinner + tab text)",
+    "type": "string",
+    "defaultValue": "#00e6ff",
+    "placeholder": "#00e6ff"
+  },
+  {
+    "property": "mod.tab-loading.glow-intensity",
+    "label": "Glow intensity (0.1 = subtle - 2.0 = strong)",
+    "type": "string",
+    "defaultValue": "0.85",
+    "placeholder": "0.85"
+  },
+  {
+    "property": "mod.tab-loading.enable-title-pulse",
+    "label": "Activate smooth pulse in the tab title.",
+    "type": "checkbox",
+    "defaultValue": true
+  }
+]

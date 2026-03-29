@@ -1,0 +1,70 @@
+:root {
+  --mod-tab-loading-loading-color: #00e6ff;
+  --mod-tab-loading-glow-intensity: 0.85;
+  --mod-tab-loading-enable-title-pulse: true;
+}
+
+.tabbrowser-tab[busy="true"] .tab-icon-image {
+  display: none !important;
+}
+
+.tabbrowser-tab[busy="true"] .tab-throbber {
+  display: inline-flex !important;
+  width: 19px;
+  height: 19px;
+  border-radius: 9999px;
+  border: 2.8px solid rgba(255, 255, 255, 0.18);
+  border-top-color: currentColor;
+  animation: tab-throbber-spin 1.08s linear infinite !important;
+  filter: drop-shadow(0 0 8px currentColor) !important;
+  background: transparent !important;
+  position: relative;
+}
+
+@keyframes tab-throbber-spin {
+  0%   { transform: rotate(0deg) scale(0.90); }
+  45%  { transform: rotate(162deg) scale(1.12); }
+  70%  { transform: rotate(270deg) scale(1.06); }
+  100% { transform: rotate(360deg) scale(0.90); }
+}
+
+.tab-throbber[busy]::before {
+  content: "";
+  position: absolute;
+  inset: -7px;
+  border-radius: 9999px;
+  background: radial-gradient(circle, currentColor 12%, transparent 68%);
+  opacity: calc(var(--mod-tab-loading-glow-intensity) * 0.32);
+  animation: tab-throbber-glow 2.9s ease-in-out infinite;
+  z-index: -1;
+  filter: blur(1.5px);
+}
+
+@keyframes tab-throbber-glow {
+  0%, 100% { transform: scale(0.70); }
+  50%      { transform: scale(1.50); }
+}
+
+@media (-moz-pref("mod.modern-tab-loading.enable-title-pulse")) {
+  .tabbrowser-tab[busy="true"] .tab-label-container .tab-text,
+  .tabbrowser-tab[busy="true"] .tab-label {
+    animation: tab-title-pulse 2.9s ease-in-out infinite !important;
+  }
+}
+
+@keyframes tab-title-pulse {
+  0%, 100% { opacity: 1.0; filter: brightness(1); }
+  50%      { opacity: 0.36; filter: brightness(1.18); }
+}
+
+.tabbrowser-tab[busy="true"] .tab-label,
+.tabbrowser-tab[busy="true"] .tab-throbber {
+  color: var(--mod-tab-loading-loading-color) !important;
+}
+
+@media (prefers-color-scheme: light) {
+  .tabbrowser-tab[busy="true"] .tab-label,
+  .tabbrowser-tab[busy="true"] .tab-throbber {
+    color: var(--mod-tab-loading-loading-color) !important;
+  }
+}
